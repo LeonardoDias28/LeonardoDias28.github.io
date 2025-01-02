@@ -245,4 +245,6 @@
   
   .contact-section ul {
     display: flex;
-    flex-
+    flex-direction: column;
+    gap: 1rem;
+}
