@@ -6,9 +6,9 @@ Bem-vindo ao meu site pessoal! Aqui você encontrará informações sobre mim, m
 Sou um entusiasta da programação e estou sempre aprendendo novas tecnologias. Este site é uma vitrine do meu trabalho e das minhas habilidades.
 
 ## Projetos
-- **Projeto 1**: Descrição breve do projeto.
-- **Projeto 2**: Descrição breve do projeto.
-- **Projeto 3**: Descrição breve do projeto.
+- **PetLife**
+- **Pizzaria tallis**.
+- **Mundo Aquático**
 
 ## Tecnologias Usadas
 - HTML
