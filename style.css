@@ -29,6 +29,21 @@
     color: var(--cor-texto);
     line-height: 1.6;
   }
+
+  .logo {
+    position: fixed; /* Fixa a logo no canto */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: 200px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Para deixar a imagem redonda */
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
   
   .container {
     width: 90%;
