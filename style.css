@@ -1,4 +1,5 @@
-/* Estilos para o tema escuro melhorado e detalhado */
+/* Estilos para o tema escuro melhorado e detalhado e centralização */
+
 body {
     background-color: #121212; /* Fundo escuro */
     color: #e0e0e0; /* Texto claro */
@@ -36,8 +37,9 @@ header {
     font-size: 1.5em; /* Aumentar o tamanho da fonte do nome */
 }
 
-/* Estilização da caixa de conteúdo */
-.content-box {
+/* Estilização da caixa de conteúdo e centralização */
+.content-box, .center {
+
     background-color: #1e1e1e; /* Fundo da caixa */
     border: 2px solid #ffffff; /* Borda amarela */
     border-radius: 10px; /* Bordas arredondadas */
@@ -108,8 +110,9 @@ footer {
     }
 }
 
-/* Estilização de seções */
-h1, h2 {
+/* Estilização de seções e centralização */
+h1, h2, .center {
+
     color: #d4af37; /* Cor dos títulos */
     margin-top: 10px; /* Reduzir espaçamento acima do título */
 }
@@ -127,8 +130,9 @@ p {
     margin-bottom: 10px; /* Reduzir espaçamento entre parágrafos */
 }
 
-/* Estilização dos links de ação */
-.call-to-action {
+/* Estilização dos links de ação e centralização */
+.call-to-action, .center {
+
     color: #4caf50; /* Cor mais visível e discreta */
     transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição suave */
 }
@@ -156,14 +160,4 @@ p {
 .whatsapp-float:hover {
     transform: scale(1.1); /* Aumentar ao passar o mouse */
     background-color: #1DAF5D; /* Cor ao passar o mouse */
-}
-
-
-.whatsapp-float:hover {
-    transform: scale(1.1); /* Aumentar ao passar o mouse */
-}
-
-.whatsapp-float img {
-    width: 60px; /* Ajuste o tamanho do ícone conforme necessário */
-    height: 60px; /* Ajuste o tamanho do ícone conforme necessário */
 }
