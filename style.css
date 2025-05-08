@@ -1,163 +1,348 @@
-/* Estilos para o tema escuro melhorado e detalhado e centralização */
-
-body {
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
-    font-family: 'Arial', sans-serif; /* Fonte padrão */
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    display: flex; /* Usar flexbox para layout */
-    flex-direction: column; /* Direção da coluna */
-    min-height: 100vh; /* Garantir que o corpo ocupe pelo menos a altura da tela */
+    box-sizing: border-box;
 }
 
-/* Estilização do cabeçalho */
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
 header {
-    background-color: #1e1e1e; /* Fundo do cabeçalho */
-    padding: 10px; /* Reduzir padding */
-    display: flex; /* Usar flexbox para layout */
-    align-items: center; /* Alinhar itens verticalmente */
+    background-color: #1f1f1f;
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Estilização da logo e nome */
+/* Logo */
 .logo {
-    display: flex; /* Usar flexbox para alinhar imagem e texto */
-    align-items: center; /* Alinhar verticalmente */
-    margin-right: auto; /* Empurrar outros elementos para a direita */
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    border-radius: 50%; /* Tornar a imagem circular */
-    margin-right: 5px; /* Reduzir espaçamento entre a imagem e o nome */
-    width: 180px; /* Aumentar a largura da imagem */
-    height: 180px; /* Aumentar a altura da imagem */
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #4caf50;
 }
 
 .logo strong {
-    font-size: 1.5em; /* Aumentar o tamanho da fonte do nome */
+    font-size: 1.8rem;
+    color: #a5d6a7;
 }
 
-/* Estilização da caixa de conteúdo e centralização */
-.content-box, .center {
-
-    background-color: #1e1e1e; /* Fundo da caixa */
-    border: 2px solid #ffffff; /* Borda amarela */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Preenchimento interno */
-    margin: 20px auto; /* Centralizar a caixa */
-    max-width: 800px; /* Largura máxima */
-}
-
-/* Estilização da caixa de habilidades */
-.skills-box {
-    background-color: #1e1e1e; /* Fundo da caixa */
-    border: 2px solid #ffffff; /* Borda amarela */
-    border-radius: 10px; /* Bordas arredondadas */
-    padding: 20px; /* Preenchimento interno */
-    margin: 20px 0; /* Margem superior e inferior */
-}
-
-/* Estilização dos links de navegação */
+/* Navegação */
 nav {
-    display: flex; /* Usar flexbox para links de navegação */
-    margin-left: auto; /* Empurrar links para a direita */
+    display: flex;
+    gap: 25px;
 }
 
 .nav-link {
-    color: #ffffff; /* Cor dos links */
+    color: #b0bec5;
     text-decoration: none;
-    margin: 0 20px; /* Aumentar margem para espaçamento */
-    padding: 5px 10px; /* Reduzir padding para links */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: #3a3a3a; /* Efeito ao passar o mouse */
-    color: #ffcc00; /* Mudança de cor ao passar o mouse */
+    background-color: #4caf50;
+    color: #121212;
 }
 
-/* Estilização do container principal */
+/* Container principal */
 .container {
-    padding: 10px; /* Reduzir padding */
-    flex: 1; /* Permitir que o container cresça para ocupar espaço disponível */
+    flex: 1;
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 120px;
 }
 
-/* Estilização do rodapé */
-footer {
-    background-color: #1e1e1e; /* Fundo do rodapé */
-    text-align: center;
-    padding: 5px; /* Reduzir padding */
+/* Contato: container expandido e alinhado à esquerda */
+.contato-page .container {
+    max-width: 2400px;
+    padding: 0 200px;
+    margin: 40px 0 40px 0; /* remove centralização, alinha à esquerda */
+}
+
+/* Contato: centralizar a foto do perfil */
+.contato-page .profile-pic {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Contato: remover linha de baixo do h2 */
+.contato-page h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+
+/* Contato: lista (li) com tom azul mais visível para maior destaque */
+.contato-page ul li {
+    color: #3399ff; /* tom de azul mais brilhante e visível */
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+/* Contato: container da imagem lateral */
+.side-image-container {
+    float: right;
+    width: 40%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contato: imagem lateral responsiva */
+.side-image {
     width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
 }
 
-/* Estilos responsivos */
-@media (max-width: 600px) {
-    header {
-        padding: 10px;
-        flex-direction: column; /* Mudar para coluna em dispositivos móveis */
-        align-items: flex-start; /* Alinhar itens à esquerda */
-    }
-
-    .nav-link {
-        display: block; /* Links em coluna em dispositivos móveis */
-        margin: 5px 0;
-    }
-
-    .container {
-        padding: 10px;
-    }
+/* Contato: links (a) com tom azul mais visível para maior destaque */
+.contato-page ul li a {
+    color: #3399ff; /* tom de azul mais brilhante e visível */
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* Estilização de seções e centralização */
-h1, h2, .center {
+.contato-page ul li a:hover {
+    color: #66b3ff; /* tom de azul mais claro ao passar o mouse */
+    text-decoration: underline;
+}
 
-    color: #d4af37; /* Cor dos títulos */
-    margin-top: 10px; /* Reduzir espaçamento acima do título */
+/* Contato: links (a) dentro de parágrafos com tom azul mais visível */
+.contato-page p a {
+    color: #3399ff; /* tom de azul mais brilhante e visível */
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato-page p a:hover {
+    color: #66b3ff; /* tom de azul mais claro ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Caixa de conteúdo principal */
+.content-box {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Caixas de conteúdo */
+.content-box, .skills-box {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    padding: 30px 25px;
+    margin-bottom: 30px;
+    border: 1px solid #4caf50;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #a5d6a7;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 h1 {
-    font-size: 2.5em; /* Ajustar tamanho do título principal */
+    font-size: 2.8rem;
 }
 
 h2 {
-    font-size: 1.8em; /* Ajustar tamanho dos subtítulos */
+    font-size: 2rem;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
 }
 
+/* Linha horizontal (hr) com tom verde igual ao h2 */
+hr {
+    border: none;
+    border-bottom: 2px solid #4caf50;
+    margin: 20px 0;
+}
+
+/* Parágrafos */
 p {
-    line-height: 1.4; /* Aumentar o espaçamento entre linhas */
-    margin-bottom: 10px; /* Reduzir espaçamento entre parágrafos */
+    color: #cfd8dc;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-/* Estilização dos links de ação e centralização */
-.call-to-action, .center {
+/* Links de ação */
+.call-to-action {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #121212;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(76,175,80,0.6);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-right: 15px;
+    animation: float-small 4s ease-in-out infinite;
+}
 
-    color: #4caf50; /* Cor mais visível e discreta */
-    transition: color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transição suave */
+@keyframes float-small {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.call-to-action:last-child {
+    margin-right: 0;
+}
+
+.call-to-action:last-child {
+    margin-right: 0;
+}
+
+section {
+    margin-bottom: 20px;
 }
 
 .call-to-action:hover {
-    color: #388e3c; /* Cor ao passar o mouse */
-    transform: scale(1.1); /* Aumentar ligeiramente ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao passar o mouse */
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    background-color: #388e3c;
+    transform: translateY(-3px);
 }
 
-/* Estilo do botão flutuante do WhatsApp */
+/* Rodapé */
+footer {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.7);
+    font-size: 0.9rem;
+    color: #789262;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+
+    .container {
+        margin: 20px 15px;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Estilos para as seções de experiência e formação */
+.experience-section, .education-section {
+    background-color: #292929;
+    border: 1px solid #4caf50;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+.experience-section h2, .education-section h2 {
+    color: #81c784;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.experience-section p, .education-section p {
+    color: #cfd8dc;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Estilos para as seções do index */
+.skills-box {
+    background-color: #292929;
+    border: 1px solid #4caf50;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+}
+
+.skills-box p, .skills-box ul {
+    color: #cfd8dc;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.skills-box h2 {
+    color: #81c784;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* Botão flutuante WhatsApp */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366; /* Cor do WhatsApp */
-    border-radius: 50%; /* Forma circular */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
-    padding: 15px; /* Aumentar o padding */
-    z-index: 1000; /* Para garantir que fique acima de outros elementos */
-    transition: transform 0.3s, background-color 0.3s; /* Transição suave */
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1); /* Aumentar ao passar o mouse */
-    background-color: #1DAF5D; /* Cor ao passar o mouse */
+    background-color: #1DAF5D;
+    transform: scale(1.1);
 }
