@@ -68,105 +68,24 @@ nav {
 
 /* Container principal */
 .container {
-    flex: 1;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 40px auto;
-    padding: 0 120px;
+    padding: 0 20px;
 }
 
-/* Contato: container expandido e alinhado à esquerda */
-.contato-page .container {
-    max-width: 2400px;
-    padding: 0 200px;
-    margin: 40px 0 40px 0; /* remove centralização, alinha à esquerda */
-}
-
-/* Contato: centralizar a foto do perfil */
-.contato-page .profile-pic {
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-/* Contato: remover linha de baixo do h2 */
-.contato-page h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 20px;
-}
-
-/* Contato: lista (li) com tom azul mais visível para maior destaque */
-.contato-page ul li {
-    color: #3399ff; /* tom de azul mais brilhante e visível */
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 14px;
-}
-
-/* Contato: container da imagem lateral */
-.side-image-container {
-    float: right;
-    width: 40%;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-/* Contato: imagem lateral responsiva */
-.side-image {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
-}
-
-/* Contato: links (a) com tom azul mais visível para maior destaque */
-.contato-page ul li a {
-    color: #3399ff; /* tom de azul mais brilhante e visível */
-    font-weight: 700;
-    font-size: 1.4rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contato-page ul li a:hover {
-    color: #66b3ff; /* tom de azul mais claro ao passar o mouse */
-    text-decoration: underline;
-}
-
-/* Contato: links (a) dentro de parágrafos com tom azul mais visível */
-.contato-page p a {
-    color: #3399ff; /* tom de azul mais brilhante e visível */
-    font-weight: 700;
-    font-size: 1.4rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contato-page p a:hover {
-    color: #66b3ff; /* tom de azul mais claro ao passar o mouse */
-    text-decoration: underline;
-}
-
-/* Caixa de conteúdo principal */
-.content-box {
-    max-width: 1600px;
-    margin: 0 auto;
-}
-
-/* Caixas de conteúdo */
+/* Caixa de conteúdo */
 .content-box, .skills-box {
     background-color: #1f1f1f;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
     padding: 30px 25px;
     margin-bottom: 30px;
-    border: 1px solid #4caf50;
 }
 
 /* Títulos */
-h1, h2 {
+h1, h2, h3 {
     color: #a5d6a7;
-    margin-bottom: 15px;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 h1 {
@@ -175,26 +94,57 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    border-bottom: 2px solid #4caf50;
     padding-bottom: 8px;
     margin-bottom: 20px;
 }
 
-/* Linha horizontal (hr) com tom verde igual ao h2 */
-hr {
-    border: none;
-    border-bottom: 2px solid #4caf50;
-    margin: 20px 0;
+.projetos-page h3.petlife-title {
+    font-size: 2.4rem !important;
+}
+
+.projetos-page h3 {
+    font-size: 2.4rem !important;
 }
 
 /* Parágrafos */
 p {
     color: #cfd8dc;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
-/* Links de ação */
+/* Vídeos na página projetos - aumentado tamanho */
+.projetos-page video {
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 100%;
+    max-width: 1150px;
+    height: auto;
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Links */
+a {
+    color: #4caf50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #66bb6a;
+    text-decoration: underline;
+}
+
+/* Botões de ação */
 .call-to-action {
     display: inline-block;
     background-color: #4caf50;
@@ -220,14 +170,6 @@ p {
 
 .call-to-action:last-child {
     margin-right: 0;
-}
-
-.call-to-action:last-child {
-    margin-right: 0;
-}
-
-section {
-    margin-bottom: 20px;
 }
 
 .call-to-action:hover {
@@ -273,50 +215,59 @@ footer {
     }
 }
 
-/* Estilos para as seções de experiência e formação */
-.experience-section, .education-section {
-    background-color: #292929;
-    border: 1px solid #4caf50;
-    border-radius: 12px;
-    padding: 25px 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+/* Contato page specific styles */
+.contato-page .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 40px auto;
 }
 
-.experience-section h2, .education-section h2 {
-    color: #81c784;
-    border-bottom: 2px solid #4caf50;
-    padding-bottom: 8px;
+.contato-page .profile-pic {
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.contato-page h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.contato-page ul li {
+    color: #3399ff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.side-image-container {
+    float: right;
+    width: 40%;
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 
-.experience-section p, .education-section p {
-    color: #cfd8dc;
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-/* Estilos para as seções do index */
-.skills-box {
-    background-color: #292929;
-    border: 1px solid #4caf50;
+.side-image {
+    width: 100%;
+    height: auto;
     border-radius: 12px;
-    padding: 25px 30px;
-    margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.7);
 }
 
-.skills-box p, .skills-box ul {
-    color: #cfd8dc;
-    font-size: 1.1rem;
-    line-height: 1.5;
+.contato-page ul li a,
+.contato-page p a {
+    color: #3399ff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.skills-box h2 {
-    color: #81c784;
-    border-bottom: 2px solid #4caf50;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
+.contato-page ul li a:hover,
+.contato-page p a:hover {
+    color: #66b3ff;
+    text-decoration: underline;
 }
 
 /* Botão flutuante WhatsApp */
@@ -346,3 +297,4 @@ footer {
     background-color: #1DAF5D;
     transform: scale(1.1);
 }
+
